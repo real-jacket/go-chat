@@ -1,4 +1,5 @@
 import React from 'react'
+import './ChatHistory.scss'
 
 function ChatHistory(props) {
     const message = props.chatHistory.map((msg, index) => (
