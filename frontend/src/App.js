@@ -1,11 +1,15 @@
-import React, {useEffect} from 'react'
-import './App.css'
-import {connect, sendMsg} from './api'
+import React, { useEffect, useState } from 'react'
+import { connect, sendMsg } from './api'
+import Header from './components/header/Header'
+import ChatHistory from './components/ChatHistory/ChatHistory'
 
 function App() {
+    const [chatHistory, setChatHistory] = useState([])
     useEffect(() => {
-        connect()
-    },[])
+        connect(msg => {
+            setChatHistory([...chatHistory, msg])
+        })
+    }, [chatHistory])
 
     function send() {
         console.log('hello')
@@ -14,7 +18,9 @@ function App() {
 
     return (
         <div className="App">
+            <Header />
             <button onClick={send}>Hit</button>
+            <ChatHistory chatHistory={chatHistory} />
         </div>
     )
 }
