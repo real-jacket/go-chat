@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/go-chat/pkg/websocket"
+	"github.com/segmentio/ksuid"
 )
 
 // 定义 Websocket 服务处理函数
@@ -16,6 +17,7 @@ func serveWs(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
 	}
 
 	client := &websocket.Client{
+		ID:   ksuid.New().String(),
 		Conn: conn,
 		Pool: pool,
 	}

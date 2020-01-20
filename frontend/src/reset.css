@@ -6,6 +6,12 @@
 *{
     box-sizing: border-box;
 }
+input{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -23,7 +29,6 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }
@@ -48,7 +53,6 @@ blockquote, q {
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
-    content: none;
 }
 table {
     border-collapse: collapse;
