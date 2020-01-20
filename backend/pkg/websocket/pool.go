@@ -56,7 +56,3 @@ func (pool *Pool) Start() {
 		}
 	}
 }
-
-func (pool *Pool) Close() {
-
-}

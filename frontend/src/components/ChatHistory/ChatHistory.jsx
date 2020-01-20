@@ -1,9 +1,10 @@
 import React from 'react'
 import './ChatHistory.scss'
+import Message from '../Message/Message'
 
 function ChatHistory(props) {
     const message = props.chatHistory.map((msg, index) => (
-        <p key={index}>{msg.data}</p>
+        <Message key={index} message={msg.data} />
     ))
     return (
         <div className="ChatHistory">

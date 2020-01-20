@@ -1,0 +1,13 @@
+.Message {
+    display: block;
+    background-color: white;
+    margin: 10px 0;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    &.me {
+        color: white;
+        background-color: #328ec4;
+    }
+}
